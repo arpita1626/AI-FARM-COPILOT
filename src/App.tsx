@@ -61,24 +61,24 @@ const MainAppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-['Plus_Jakarta_Sans',sans-serif]">
-      {/* Top Navbar */}
-      <Navbar
-        onToggleSidebar={() => setIsSidebarOpen((prev) => !prev)}
+    <div className="flex h-screen w-full bg-slate-50 text-slate-800 font-['Plus_Jakarta_Sans',sans-serif] overflow-hidden">
+      {/* Navigation Sidebar */}
+      <Sidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
         onOpenDemoGuide={() => setIsDemoGuideOpen(true)}
       />
 
-      {/* Main Container with Sidebar + Content */}
-      <div className="flex flex-1">
-        {/* Navigation Sidebar */}
-        <Sidebar
-          isOpen={isSidebarOpen}
-          onClose={() => setIsSidebarOpen(false)}
+      {/* Main Content Column: flex-1, min-width: 0, starts completely after the sidebar */}
+      <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden">
+        {/* Top Navbar */}
+        <Navbar
+          onToggleSidebar={() => setIsSidebarOpen((prev) => !prev)}
           onOpenDemoGuide={() => setIsDemoGuideOpen(true)}
         />
 
-        {/* Content Area */}
-        <main className="flex-1 lg:pl-72 p-4 sm:p-6 lg:p-8 overflow-y-auto">
+        {/* Scrollable Content Area */}
+        <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 sm:p-6 lg:p-8 min-w-0">
           {renderActiveView()}
 
           {/* Platform Positioning & Trust Footer */}

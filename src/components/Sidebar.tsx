@@ -57,7 +57,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, onOpenDemoGui
 
       {/* Sidebar Panel */}
       <aside
-        className={`fixed top-0 bottom-0 left-0 z-50 w-72 bg-slate-900 text-slate-300 flex flex-col transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+        style={{ width: '280px', minWidth: '280px' }}
+        className={`fixed inset-y-0 left-0 z-50 w-[280px] bg-slate-900 text-slate-300 flex flex-col transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 lg:shrink-0 lg:h-screen lg:z-auto ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >

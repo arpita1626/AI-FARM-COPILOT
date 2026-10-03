@@ -93,7 +93,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onToggleSidebar, onOpenDemoGuide
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-slate-200/80 shadow-xs">
+    <header className="sticky top-0 z-30 bg-white border-b border-slate-200/80 shadow-xs shrink-0 w-full">
       {/* Syncing Notification Banner */}
       {isSyncing && (
         <div className="bg-emerald-600 text-white text-xs py-1 px-4 text-center flex items-center justify-center gap-2 font-medium animate-pulse">
