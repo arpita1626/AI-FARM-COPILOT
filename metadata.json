@@ -1,0 +1,6 @@
+{
+  "name": "AI Farm Copilot",
+  "description": "AI-powered agricultural decision-support platform connecting the complete farming lifecycle from planning to selling with risk intelligence, what-if simulations, and market optimization.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
